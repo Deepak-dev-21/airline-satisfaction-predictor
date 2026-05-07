@@ -1,34 +1,36 @@
-# Airline Passenger Satisfaction API
+# Airline Satisfaction Predictor
 
-A FastAPI project that predicts airline passenger satisfaction using a saved machine learning model.
+A FastAPI-based machine learning web application that predicts whether an airline passenger is satisfied or neutral/dissatisfied based on travel details, service ratings, and delay information.
 
-## Setup
+## Features
 
-```bash
-python -m venv venv
-.\venv\Scripts\python.exe -m pip install -r requirements.txt
-```
+- Passenger satisfaction prediction
+- Simple web user interface
+- FastAPI backend
+- Interactive Swagger API docs
+- Machine learning model loaded from saved `.pkl` files
+- Health check endpoint
+- Unit tests included
 
-## Run
+## Tech Stack
 
-```bash
-.\venv\Scripts\python.exe -m uvicorn app:app --reload
-```
+- Python
+- FastAPI
+- Pandas
+- Scikit-learn
+- Joblib
+- HTML, CSS, JavaScript
 
-Open the user interface at:
+## Project Structure
 
 ```txt
-http://127.0.0.1:8000/
-```
-
-Interactive API docs are available at:
-
-```txt
-http://127.0.0.1:8000/docs
-```
-
-## Test
-
-```bash
-.\venv\Scripts\python.exe -W error -m unittest discover -v
-```
+airline/
+├── app.py
+├── model.pkl
+├── scaler.pkl
+├── feature_columns.pkl
+├── requirements.txt
+├── tests/
+│   ├── __init__.py
+│   └── test_app.py
+└── README.md
